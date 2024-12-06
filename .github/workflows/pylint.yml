@@ -19,8 +19,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install codespell flake8 isort==5.11.5 yapf
+        pip install codespell flake8 isort==5.11.0 yapf
 
     # modify the folders accordingly
     - name: Lint
