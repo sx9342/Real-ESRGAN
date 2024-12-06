@@ -16,7 +16,10 @@ jobs:
       - name: Upgrade pip
         run: pip install pip --upgrade
       - name: Install PyTorch (cpu)
-        run: pip install torch==1.7.0+cpu torchvision==0.8.1+cpu isort==5.11.0 -f https://download.pytorch.org/whl/torch_stable.html
+        run: pip install torch==1.7.0+cpu torchvision==0.8.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
+        run: pip uninstall isort
+        run: isort --version
+        run: pip install isort==5.11.0
       - name: Install dependencies
         run: |
           pip install basicsr
